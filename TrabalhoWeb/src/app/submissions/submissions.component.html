@@ -1,0 +1,40 @@
+
+<div *ngIf=" isSignedIn != null " >
+<ng-container *ngFor="let a of usersarray ; let i = index">
+    <mat-card>
+        <div class="profile-card">
+
+        </div>
+        
+       
+            
+        <div class="header">
+            
+          <h3>  {{a.Nome}} </h3>
+
+            <br>
+            <a> <b> Estado </b> <br> </a>{{a.Estado}}  <br>
+    
+            <a> <b>Idade</b> <br> </a> {{a.Idade}}  <br>
+    
+            <a> <b>Pais</b> <br></a> {{a.Pais}}  <br>
+    
+            <a> <b>Sexo</b> <br></a> {{a.Sexo}}  <br>
+
+            <br>
+            <a mat-list-item [routerLink]="[ '/edituser', id[i] ]" routerLinkActive="active">Editar</a> 
+           
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/PICA.jpg" class="img"> 
+            
+            <mat-divider></mat-divider>
+               
+
+        </div>
+        
+       
+       
+    </mat-card>
+
+</ng-container>
+
+</div>

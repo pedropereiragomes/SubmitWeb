@@ -1,0 +1,36 @@
+.background{
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    position: relative;
+    display:table;
+    margin:0 auto;  
+    margin-top:40px;
+    align-self: center;
+    text-align: center;
+    font-size: large;
+    
+    }
+    .example-container{
+    
+        margin-top: 60px;
+    }
+    .nif-span{
+        
+        margin-top: 40px;
+        
+    }
+    
+    .form-radio-state-options{
+    
+        text-align: left;
+    }
+    
+    .submit-button{
+    
+        margin-top: 20px;
+    }
+    

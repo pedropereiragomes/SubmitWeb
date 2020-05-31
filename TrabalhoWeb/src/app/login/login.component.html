@@ -1,0 +1,55 @@
+<div>
+  <mat-card class="loginform"> 
+    <h4>Introduza os seus dados de login</h4>
+  <form class="example-form" (ngSubmit) = "login(postLoginForm)" #postLoginForm="ngForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nome de Utilizador</mat-label>
+      <input matInput placeholder="Ex: Glorioso_Benfica" name="username" ngModel>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <input type="password" matInput placeholder="Password" name="password" ngModel>
+
+    </mat-form-field>
+    <br>
+
+    <button mat-raised-button color="primary">Fazer Login</button>
+  </form>
+
+  <button mat-raised-button color="accent" id="create-acount" (click)="onClickCreateAcount()">Criar conta</button>
+  </mat-card>
+
+</div>
+
+<div  *ngIf="createAcount == true" class="createuserformdiv">
+  <mat-card class="createuserform"> 
+    <h4>Criação de um novo registo</h4>
+
+<form (ngSubmit) = "onAddUser(postForm)" #postForm="ngForm" >
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nome de Utilizador</mat-label>
+    <input matInput placeholder="Ex: Glorioso_Benfica"  name="username" ngModel>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <input type="password" matInput placeholder="Password" name="password1" ngModel>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <input type="password" matInput placeholder="Confirmar Password" name="password2" ngModel>
+
+  </mat-form-field>
+  <br>
+  <button
+  mat-raised-button 
+  color="primary"
+  >Criar Utilizador</button>
+
+
+  
+</form>
+</mat-card>
+
+
+</div>

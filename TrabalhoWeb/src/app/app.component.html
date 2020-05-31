@@ -1,0 +1,47 @@
+
+<!-- HEADER -->
+<mat-toolbar color="primary">
+ 
+ 
+ 
+  <mat-toolbar-row>
+  
+    <button mat-icon-button (click)="togglesidebar()">    
+      <mat-icon>menu</mat-icon>
+    
+    </button>
+     <button mat-icon-button color="accent" routerLink="..">
+
+      <mat-icon>home</mat-icon>
+
+    </button>
+  
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<!---->
+
+<mat-drawer-container class="example-container">
+  
+  <mat-drawer mode="side" [opened] = "sidebarOpenedOrClosed">
+
+    <app-sidenav></app-sidenav>
+
+  </mat-drawer>
+  
+    <mat-drawer-content>
+
+    <router-outlet></router-outlet>
+
+  </mat-drawer-content>
+
+
+
+</mat-drawer-container>
+
+ 
+
+
+
+

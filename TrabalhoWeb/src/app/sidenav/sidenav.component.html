@@ -1,0 +1,31 @@
+<mat-nav-list>
+
+        <h2>Trabalho Web</h2>
+    <div class="profile-card">
+        
+        <img src="https://www.incode2030.gov.pt/sites/default/files/styles/incode_crop_1200x400/public/featured/ipca.pt_0_0.png?itok=0NFFDS01" alt="imagem" class="img">
+    </div>
+
+
+
+<mat-divider></mat-divider>
+
+
+<h2 matSubheader>Páginas</h2>
+<a mat-list-item routerLink="/login" routerLinkActive="active">Log In</a> 
+<mat-divider></mat-divider>
+
+<a mat-list-item routerLink="/dashboard" routerLinkActive="active">Dashboard</a> 
+
+<a mat-list-item routerLink="/form">Fill Form</a>
+
+<a *ngIf = "isSignedIn" mat-list-item routerLink="/submissions">View Submited Data</a>
+
+<mat-divider></mat-divider>
+
+<div *ngIf=" isSignedIn != null ">
+<a mat-list-item  (click) = logout()> Log Out</a>
+</div>
+
+</mat-nav-list>
+

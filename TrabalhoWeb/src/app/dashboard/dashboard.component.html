@@ -1,0 +1,79 @@
+<!--
+<ul>
+    <li *ngFor="let user of users ">
+       {{ user }}
+    </li>
+  </ul>
+   -->
+
+
+<mat-card class="linegraph">
+    <plotly-plot [data]="linegraph" [layout]="linelayout"></plotly-plot>
+</mat-card>
+<mat-divider></mat-divider>
+
+<mat-divider></mat-divider>
+<div class="graph-container">
+    <mat-card class="graph1">
+        <plotly-plot [data]="graph.data" [layout]="graph.layout"></plotly-plot>
+    </mat-card>
+
+    <mat-card class="graph2">
+        <plotly-plot [data]="graph2.data" [layout]="graph2.layout"></plotly-plot>
+    </mat-card>
+
+    <div class="container">
+        <mat-list>
+            <div class="submission-card" style="text-align: center;">
+
+                <mat-card>
+                    <h3> Numero de Submissões </h3>
+                    <mat-divider></mat-divider><br>
+                    {{nSubmissions}}
+
+                </mat-card>
+
+            </div>
+            <div class="country-card"style="text-align: center;">
+                <mat-card>
+                    <h3>Ultimo Pais a submeter informação </h3>
+                    <mat-divider></mat-divider><br>
+                    {{PaisSubmetido}}
+
+                </mat-card>
+            </div>
+
+
+
+            <div style="text-align: center;">
+                <mat-card>
+                    <h3>
+                        A Taxa de Mortalidade Atual é:
+                    </h3>
+                    <mat-divider></mat-divider><br>
+                    <b>{{TaxaMortalidade}}%</b>
+                </mat-card>
+
+            </div>
+        </mat-list>
+    </div>
+
+
+</div>
+
+
+
+<mat-card class="graphmenwoman">
+    <plotly-plot [data]="data" [layout]="layout"></plotly-plot>
+</mat-card>
+
+
+<mat-card class="horizontalbar">
+    <plotly-plot [data]="horizontalbar1" [layout]="horizontalbar1layout"> </plotly-plot>
+</mat-card>
+
+
+
+
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>

@@ -1,0 +1,137 @@
+<div *ngIf=" isSignedIn != null " class="background">
+
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome Completo:</mat-label>
+      <input matInput [(ngModel)]="nome">
+    </mat-form-field>
+    <br>
+  </div>
+
+
+  <mat-radio-group aria-label="Selecione uma opção" [(ngModel)]="formRadioValue">
+    <mat-radio-button *ngFor="let a of formRadioOptions" [value]="a">
+      {{a}}</mat-radio-button>
+
+  </mat-radio-group>
+
+  <div *ngIf="formRadioValue == 'Singular'">
+
+
+    <div class="nif-span">
+      <mat-form-field hintLabel="Máximo 10 caracteres" appearance="fill">
+        <mat-label>Introduza o seu NIF</mat-label>
+        <input matInput #input minlength="8" required placeholder="Ex. 25687123" #content="ngModel" name ="content" [(ngModel)]="numeronif">
+         <mat-error *ngIf="content.invalid">Introduza um NIF válido!</mat-error>
+      </mat-form-field>
+    </div>
+
+    <mat-radio-group aria-label="Selecione uma opção" [(ngModel)]="formRadioValueState">
+      <ng-container *ngFor="let a of formRadioStateOptions">
+        <br>
+        <div class="form-radio-state-options">
+          <mat-radio-button [value]="a">
+            {{a}}
+          </mat-radio-button>
+
+          <br>
+          <br>
+        </div>
+      </ng-container>
+    </mat-radio-group>
+
+
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label> País de Residencia:</mat-label>
+        <input matInput [(ngModel)]="pais">
+      </mat-form-field>
+      <br>
+    </div>
+
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label> Idade: </mat-label>
+        <input matInput [(ngModel)]="idade">
+      </mat-form-field>
+      <br>
+    </div>
+
+
+    <mat-radio-group aria-label="Selecione uma opção" [(ngModel)]="formRadioSex">
+      <mat-radio-button *ngFor="let a of formRadioSexOptions" [value]="a">{{a}}</mat-radio-button>
+    </mat-radio-group>
+    <br>
+    <button class="submit-button" mat-raised-button color="accent" (click)="onSubmit()">Submeter Registo</button>
+
+
+  </div>
+
+
+  <div *ngIf="formRadioValue == 'Organização' ">
+
+    <div class="nif-span">
+      <mat-form-field hintLabel="Máximo 10 caracteres" appearance="fill">
+        <mat-label>Introduza o seu NIF</mat-label>
+        <input matInput #input minlength="8" required placeholder="Ex. 25687123" #content="ngModel" name ="content" [(ngModel)]="numeronif">
+         <mat-error *ngIf="content.invalid">Introduza um NIF válido!</mat-error>
+      </mat-form-field>
+    </div>
+
+    <mat-radio-group aria-label="Selecione uma opção" [(ngModel)]="formRadioValueState">
+      <ng-container *ngFor="let a of formRadioStateOptions">
+        <br>
+        <div class="form-radio-state-options">
+          <mat-radio-button [value]="a">
+            {{a}}
+
+          </mat-radio-button>
+          <br>
+          <br>
+        </div>
+      </ng-container>
+    </mat-radio-group>
+
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label> País de Residencia:</mat-label>
+        <input matInput [(ngModel)]="pais">
+      </mat-form-field>
+      <br>
+    </div>
+
+
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label> Idade: </mat-label>
+        <input matInput [(ngModel)]="idade">
+      </mat-form-field>
+      <br>
+    </div>
+
+
+    <mat-radio-group aria-label="Selecione uma opção" [(ngModel)]="formRadioSex">
+      <mat-radio-button *ngFor="let a of formRadioSexOptions" [value]="a">{{a}}</mat-radio-button>
+    </mat-radio-group>
+    <br>
+
+
+    <button class="submit-button" mat-raised-button color="primary" (click)="addInstituicao()">Adicionar uma nova Submissão</button>
+    <br>
+
+    <button class="submit-button" mat-raised-button color="accent" (click)="submeterSubmicao()">Submeter
+      Registos</button>
+
+   
+
+  </div>
+
+
+
+
+</div>
+
+<div *ngIf=" isSignedIn== null " id="loginerror"> 
+  <h2>Para poder submeter um formulário é necessario fazer login!</h2>
+
+</div>

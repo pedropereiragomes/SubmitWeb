@@ -1,0 +1,36 @@
+.submission-card{
+    padding-top: 30px;
+ padding-bottom: 30px;
+  width: 300px;
+
+}
+.country-card{
+   
+  width: 300px;
+  padding-bottom: 30px;
+    
+}
+.container {
+    display: flex;
+    padding-left: 50px;
+  }
+
+.graph2{
+  margin-left: 50px;
+}
+
+.graph-container{
+  display: flex;
+}
+
+.linegraph{
+
+  padding-left:40px;
+}
+
+.graphmenwoman{
+  padding-left: 80px;
+}
+.horizontalbar{
+  padding-left: 100px;
+}

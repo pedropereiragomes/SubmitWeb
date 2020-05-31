@@ -1,0 +1,15 @@
+.mat-raised-button{
+
+    position: absolute; /*or fixed*/
+    right: 20px;
+}
+
+.example-container{
+
+    width: 99%;
+    height: 100%;
+}
+.mat-drawer{
+
+    width: 350px;
+}

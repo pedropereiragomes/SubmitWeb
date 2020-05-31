@@ -1,0 +1,50 @@
+
+<div class="background">
+  
+  
+<div class="nif-span">
+    <mat-form-field hintLabel="Máximo 10 caracteres" appearance="fill">
+      <mat-label>Introduza o seu NIF</mat-label>
+      <input matInput #input maxlength="10" placeholder="Ex. 25687123" [(ngModel)]="numeronif">
+    </mat-form-field>
+  </div>
+
+  <mat-radio-group aria-label="Selecione uma opção" [(ngModel)]="formRadioValueState">
+    <ng-container *ngFor="let a of formRadioStateOptions">
+      <br>
+      <div class="form-radio-state-options">
+        <mat-radio-button [value]="a">
+          {{a}}
+        </mat-radio-button>
+
+        <br>
+        <br>
+      </div>
+    </ng-container>
+  </mat-radio-group>
+
+
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label> País de Residencia:</mat-label>
+      <input matInput [(ngModel)]="pais">
+    </mat-form-field>
+    <br>
+  </div>
+
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label> Idade: </mat-label>
+      <input matInput [(ngModel)]="idade">
+    </mat-form-field>
+    <br>
+  </div>
+
+
+  <mat-radio-group aria-label="Selecione uma opção" [(ngModel)]="formRadioSex">
+    <mat-radio-button *ngFor="let a of formRadioSexOptions" [value]="a">{{a}}</mat-radio-button>
+  </mat-radio-group>
+  <br>
+
+  <button class="submit-button" mat-raised-button color="primary" (click)=updateUser()>Alterar Registo</button>
+</div>
